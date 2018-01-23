@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <title>Foodmap</title>
+</head>
+
+<body>
+  <!-- Splash-->
+  <div id="splash" class="animated zoomInUp">
+    <h1 class="text-center animated infinite hinge">Foodmap</h1>
+  </div>
+
+  <section id="main" style="display:none;">
+    <div class="container-fluid">
+      <h1 class="text-center">Foodmap</h1>
+      <div class="square square-left"></div>
+      <hr>
+      <div class="square square-right"></div>
+      <div class="col-lg-4 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 maparea">
+        <div id="map"></div>
+      </div>
+
+      <h3 class="text-center">Comida cerca de ti</h3>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <input type="text" class="form-control" id="search" placeholder="¿Qué buscas?...">
+            <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="searchbtn"><i class="fa fa-search" aria-hidden="true" ></i></button>
+                </span>
+          </div>
+          <ul id="myUL">
+            <li><a href="#">Fastfood</a></li>
+            <li><a href="#">Antojitos</a></li>
+            <li><a href="#">Corrida</a></li>
+            <li><a href="#">cafetería</a></li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <section id="main" style="display:none;">
+    <div class="container" id="cont-food">
+
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-1">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+          <img src="http://dummyimage.com/100x100" data-toggle="modal" data-target="#modal-food">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="modal-food" tabindex="-1" role="dialog" aria-labelledby="modalFood">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        </div>
+        <div class="modal-body">
+          <img src="http://dummyimage.com/100x100" alt="">
+
+          <p>Dirección:</p>
+          <p>Descripción:</p>
+          <p>Precio:</p>
+          <p>Servicio:</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Pedir Ahora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jquery, Maps  y JS-->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfjoeDuAGDqNBRRAGFzBvGvDpvp5vyK3o&callback=initMap">
+  </script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
